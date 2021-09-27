@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vehicle Subscriptions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@^2/dist/carify.min.js?dealer={DEALER_ID}"></script>
+    <style>
+      carify-vehicle-grid.blue {
+        --active-page-indicator-bg: #64b5f6;
+        --active-page-indicator-color: #fff;
+        --heading-color: #29b6f6;
+        --card-text-color: #00acc1;
+        --card-background-color: #f9fafb;
+        --card-border-radius: 10px;
+        --busy-indicator-color: #ff4081;
+        --vehicle-name-color: #8e24aa;
+        --vehicle-specs-color: #ff4081;
+        --vehicle-price-color: #29b6f6;
+        --package-detail-bg: #cfd8dc;
+        --package-detail-color: #222;
+        --vehicle-price-strike-color: #212121;
+        --badge-electric-color: #00e5ff;
+        --badge-recent-color: #d1c4e9;
+        --badge-special-color: #f48fb1;
+        --badge-hybrid-color: #4db6ac;
+        --badge-popular-color: #fa6aff;
+        --badge-text-color: #fff;
+        --active-filter-bg: #64b5f6;
+        --active-filter-color: #fff;
+        --filter-search-bg: #64b5f6;
+        --filter-search-color: #fff;
+        --filter-view-bg: #e3f2fd;
+        --filter-view-color: #000;
+        --drop-down-bg: #fff;
+        --drop-down-color: #222;
+        --drop-down-active: #e1f5fe;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      div.wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <carify-vehicle-grid
+        class="blue"
+        sortable
+        searchable
+        paginate="8"
+        heading="Vehicles available on subscription"
+      ></carify-vehicle-grid>
+    </div>
+  </body>
+</html>
