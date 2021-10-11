@@ -85,6 +85,7 @@ You can customize this component by specifying custom attributes:
 | ---------- | ----------------------------------------------------------------- | ------: |
 | paginate   | number of cards to display per page                               |      12 |
 | heading    | specify a heading for the grid                                    |  _none_ |
+| slider     | use multiple images on vehicle cards instead of a single image    |   false |
 | sortable   | add a dropdown to the grid that allows users to sort it           |   false |
 | searchable | add a dropdown to the grid that allows users to search and filter |   false |
 | config     | an advanced configuration object (see advanced config)            |  _none_ |
