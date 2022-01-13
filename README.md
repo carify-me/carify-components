@@ -23,6 +23,14 @@ To get started, you should include the following script in the head of your HTML
 
 > Note: You should replace **{DEALER_ID}** with your _own_ unique dealer ID obtained from the CARIFY admin interface.
 
+If on the other hand, you are part of a group you should change your script `src` attribute to to following:
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@^2/dist/carify.min.js?group={GROUP_ID}"></script>
+```
+
+> Note: You should replace **{GROUP_ID}** with your _own_ unique group ID which you can obtain by contacting CARIFY.
+
 We follow [semantic versioning](https://semver.org) with the release of these components to ensure we don't introduce unwanted breaking changes to components you embed in your website. Please take note of the current semantic version constraint in the URL: `^2`.
 
 These components could potentially be receiving rolling updates by the week or by the day, so we recommend that you stick to the `^2` version constraint.
