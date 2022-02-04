@@ -134,3 +134,4 @@ Below is a list of custom CSS properties/variables that you can define for the `
 | --drop-down-bg                 | Background color of the drop-down option lists                        |
 | --drop-down-color              | Text color fo the drop-down option lists                              |
 | --drop-down-active             | Background color of the active/selected item in the drop-down list    |
+| --grid-columns                 | Number of columns to use per row in the layout of the vehicle grid    |
