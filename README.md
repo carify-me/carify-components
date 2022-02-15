@@ -11,14 +11,14 @@ functionality from the CARIFY website (for example a search grid with vehicles) 
 Include the CARIFY components script in your document head and use the custom
 HTML element tags.
 
-A full example of the `carify-vehicle-grid` component that has been fully customized with a _blue-ish_ theme via the custom CSS properties and the available attribute configurations can be found in the `example` folder.
+A full example of the `carify-vehicle-grid` component that has been fully customized with a _custom theme_ via the custom CSS properties and the available attribute configurations can be found in the `example` folder.
 
 #### Getting Started
 
 To get started, you should include the following script in the head of your HTML page or website:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@^2/dist/carify.min.js?dealer={DEALER_ID}"></script>
+<script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@^3/dist/carify.min.js?dealer={DEALER_ID}"></script>
 ```
 
 > Note: You should replace **{DEALER_ID}** with your _own_ unique dealer ID obtained from the CARIFY admin interface.
@@ -26,16 +26,16 @@ To get started, you should include the following script in the head of your HTML
 If on the other hand, you are part of a group you should change your script `src` attribute to to following:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@^2/dist/carify.min.js?group={GROUP_ID}"></script>
+<script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@^3/dist/carify.min.js?group={GROUP_ID}"></script>
 ```
 
 > Note: You should replace **{GROUP_ID}** with your _own_ unique group ID which you can obtain by contacting CARIFY.
 
-We follow [semantic versioning](https://semver.org) with the release of these components to ensure we don't introduce unwanted breaking changes to components you embed in your website. Please take note of the current semantic version constraint in the URL: `^2`.
+We follow [semantic versioning](https://semver.org) with the release of these components to ensure we don't introduce unwanted breaking changes to components you embed in your website. Please take note of the current semantic version constraint in the URL: `^3`.
 
-These components could potentially be receiving rolling updates by the week or by the day, so we recommend that you stick to the `^2` version constraint.
+These components could potentially be receiving rolling updates by the week or by the day, so we recommend that you stick to the `^3` version constraint.
 
-This way, your page that includes the script, will automatically receive _bug fixes_ **and** _new features_ but **no** breaking changes. We will only introduce breaking changes in a _major_ version change, i.e. `^3`.
+This way, your page that includes the script, will automatically receive _bug fixes_ **and** _new features_ but **no** breaking changes. We will only introduce breaking changes in a _major_ version change, i.e. `^4`.
 
 If you wish to however include a _specific_ version of the components, can you specify that in the URL as well, example:
 
@@ -43,11 +43,11 @@ If you wish to however include a _specific_ version of the components, can you s
 <script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@2.2.0/dist/carify.min.js"></script>
 ```
 
-You can view available releases on the [releases page](https://github.com/carify-me/carify-components/releases).
+You can view available releases on the [tags page](https://github.com/carify-me/carify-components/tags).
 
 #### Components
 
-Getting started with the components is straight forward. They are built as [custom HTML elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) with modern web technologies, so that you can just include these component anywhere on your page as a custom HTML tag, for example:
+Getting started with the components is straight forward. They are built as [custom HTML elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) with modern web technologies, so you can just include these component anywhere on your page as a custom HTML tag, for example:
 
 ```html
 <carify-vehicle-grid></carify-vehicle-grid>
@@ -81,6 +81,8 @@ If for example, you would like the custom HTML element to be rendered in French,
 
 > If no language is specified anywhere, the component will render using the default language, which is English.
 
+---
+
 #### The GRID component
 
 Tag: `<carify-vehicle-grid>`
@@ -91,47 +93,113 @@ You can customize this component by specifying custom attributes:
 
 | Attribute  | Description                                                       | Default |
 | ---------- | ----------------------------------------------------------------- | ------: |
-| paginate   | number of cards to display per page                               |      12 |
-| heading    | specify a heading for the grid                                    |  _none_ |
-| slider     | use multiple images on vehicle cards instead of a single image    |   false |
-| sortable   | add a dropdown to the grid that allows users to sort it           |   false |
-| searchable | add a dropdown to the grid that allows users to search and filter |   false |
-| config     | an advanced configuration object (see advanced config)            |  _none_ |
+| paginate   | Number of cards to display per page                               |      12 |
+| heading    | Specify a heading for the grid                                    |  _none_ |
+| slider     | Use multiple images on vehicle cards instead of a single image    |   false |
+| sortable   | Add a dropdown to the grid that allows users to sort it           |   false |
+| searchable | Add a search bar to the top of the grid that allows users to search and filter |   false |
+| motion     | Add motion animation to a card when hovering over it              |   false |
+| internal   | If specified, vehicle card links will not open in a new tab       |   false |
+| page       | Custom page to navigate to when a card is clicked                 |  _none_ |
+| config     | An advanced configuration object (see advanced config)            |  _none_ |
+
+##### Grid Advanced configuration
+
+You can specify and advanced `config` property as a JSON object to the `<carify-vehicle-grid>`
+component with following available properties
+
+| Attribute   | Description                                                             | Default |
+| ----------- | ----------------------------------------------------------------------- | ------: |
+| advanced    | Show or hide the 'More filters' button                                  |    true |
+| duration    | The default duration package value to query                             |      12 |
+| distance    | The default distance package value to query                             |    1000 |
+| transparent | Make the backdrop of the more filters popup transparent                 |   false |
+| topAlign    | Align the more filters popup to the top of the widget instead of center |   false |
+| hide        | Hide specific filters from the more filters popup menu                  |  _none_ |
+| filters     | Pre-apply filters to the grid                                           |  _none_ |
+
+Available `hide` options
+
+- `gear` (Hide the transmission filter)
+- `fuel` (Hide the fuel type filter)
+- `type` (Hide the car type filter)
+- `power` (Hide horse power filter)
+- `drive` (Hide drive type filter)
+- `seats` (Hide the seats filter)
+- `canton` (Hide the canton filter)
+- `dealer` (Hide the dealers filter)
+- `makes` (Hide the makes filter)
+- `models` (Hide the models filter)
+
+Example: Do not show the `Transmission Type` and `Fuel Type` filters on the more filters popup
+
+```html
+<carify-vehicle-grid config='{"hide": ["gear", "fuel"]}'></carify-vehicle-grid>
+```
+
+---
+
+#### The vehicle component
+
+Tag: `<carify-vehicle-info>`
+
+##### Attributes
+
+| Attribute | Description                                          | Default |
+| --------- | ---------------------------------------------------- | ------: |
+| uuid      | Thee UUID of the vehicle to fetch via the CARIFY API |       - |
+
+> If no UUID is provided to the `<carify-vehicle-info>` component, by default it will look for a `uuid` query parameter in the page that it is included in.
+> For example, if it is included in a page: `https://example.com/vehicle?uuid=123` it wil use `123` as the UUID of the vehicle to fetch from the CARIFY API.
+
+---
 
 ##### CSS Styles
 
 For semantic configuration, we allow you to customize the the vehicle grid through [custom css properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties).
 
-Below is a list of custom CSS properties/variables that you can define for the `carify-vehicle-grid` component in your CSS:
+Below is a list of custom CSS properties/variables that you can define for different CARIFY components in your CSS.
+You are encouraged to create your own 'theme' and style these components to match the design and/or look and feel of your website.
 
-| Property                       | Description                                                           |
-| ------------------------------ | --------------------------------------------------------------------- |
-| --active-page-indicator-bg     | Background color of active page in pagination                         |
-| --active-page-indicator-color  | Text color of active page in pagination                               |
-| --heading-color                | Text color of optional header provided through attribute              |
-| --card-text-color              | Text color of the default card contents                               |
-| --card-background-color        | Background color of the card                                          |
-| --card-border-radius           | Border radius of the card                                             |
-| --busy-indicator-color         | Color of the busy indicator when the grid is fetching/updated data    |
-| --vehicle-name-color           | Text color of the vehicle name in the card                            |
-| --vehicle-specs-color          | Text color of the vehicle specifications in the card                  |
-| --vehicle-price-color          | Text color of the vehicle price                                       |
-| --package-detail-bg            | Background color of package (duration/distance) indicators/pills      |
-| --package-detail-color         | Text color of package (duration/distance) indicators/pills            |
-| --vehicle-price-strike-color   | Color of the strike-through price if the vehicle is on promotion      |
-| --badge-electric-color         | Background color of the electric badge                                |
-| --badge-recent-color           | Background color of the recent badge (vehicle was recently added)     |
-| --badge-special-color          | Background color of the recent badge (vehicle has a discounted price) |
-| --badge-hybrid-color           | Background color of the hybrid badge                                  |
-| --badge-popular-color: #fa6aff | Background color of the popular badge (vehicle is popular)            |
-| --badge-text-color             | The text color of the badges                                          |
-| --active-filter-bg             | Background color of a filter indicator when it is applied/active      |
-| --active-filter-color          | Text color of a filter indicator when it is applied/active            |
-| --filter-search-bg             | Background color of the search button                                 |
-| --filter-search-color          | Text color of the search button                                       |
-| --filter-view-bg               | Background color fo the view button when filters are applied          |
-| --filter-view-color            | Text color fo the view button when filters are applied                |
-| --drop-down-bg                 | Background color of the drop-down option lists                        |
-| --drop-down-color              | Text color fo the drop-down option lists                              |
-| --drop-down-active             | Background color of the active/selected item in the drop-down list    |
-| --grid-columns                 | Number of columns to use per row in the layout of the vehicle grid    |
+| Property                       | Description                                                             | Default |
+| ------------------------------ | ----------------------------------------------------------------------- | ------: |
+| --busy-indicator-color         | Color of busy indicator when busy fetching data                         |    #000 |
+| --grid-font                    | The font the grid should use                                            | inherit |
+| --grid-font-base               | The base font size of the grid.                                         |    16px |
+| --grid-columns                 | Number of columns to use per row in the layout of the vehicle grid      |       4 |
+| --heading-color                | Color of the grid heading (if a heading is provided)                    |    #000 |
+| --active-page-indicator-color  | Color of the active page indicator for pagination                       |    #000 |
+| --active-page-indicator-bg     | Background color of the active page indicator for pagination            | #efefef |
+| --card-font                    | The font vehicle cards should use                                       | inherit |
+| --card-font-base               | The base font size of a card                                            |    16px |
+| --card-shadow                  | CSS drop shadow definition for a card                                   |       - |
+| --card-border-radius           | The border radius of the card                                           |    20px |
+| --card-background-color        | The background color of a card                                          |    #fff |
+| --card-text-color              | The default text color of a card                                        |    #000 |
+| --vehicle-name-color           | Color of the vehicle name inside a card                                 |    #000 |
+| --vehicle-specs-color          | Color of listed vehicle specifications inside a card                    |    #000 |
+| --vehicle-price-color          | Color of the vehicle price inside a card                                |    #000 |
+| --vehicle-price-strike-color   | Color of the strike-through price if the vehicle is on promotion        | #963131 |
+| --badge-text-color             | Text color of the badges inside a card                                  |    #000 |
+| --badge-electric-color         | Background color of the electric badge                                  | #efefef |
+| --badge-recent-color           | Background color of the recent badge (vehicle was recently added)       | #efefef |
+| --badge-special-color          | Background color of the special badge (vehicle has a discounted price)  | #efefef |
+| --badge-popular-color          | Background color of the popular badge (vehicle is popular)              | #efefef |
+| --badge-hybrid-color           | Background color of the hybrid badge                                    | #efefef |
+| --package-detail-color         | Text color of package information (months/distance) inside a card       |    #fff |
+| --package-detail-bg            | Background color of package information (months/distance) inside a card | #696969 |
+| --package-detail-border-radius | Border radius of the package details pills                              |    40px |
+| --heart-fill-color             | Fill color of the heart icon when vehicle is favoured by user           | #ff0000 |
+| --filter-search-bg             | Background color of the 'Search' button inside the filter/search bar    | #efefef |
+| --filter-search-color          | Text color of the 'Search' button inside the filter/search bar          |    #222 |
+| --filter-view-bg               | Background color of the 'View' button inside the more filters popup     | #efefef |
+| --filter-view-color            | Text color of the 'View' button inside the more filters popup           |    #222 |
+| --active-filter-bg             | Background color an applied filter inside the more filters popup        | #efefef |
+| --active-filter-color          | Text color an applied filter inside the more filters popup              |    #222 |
+| --drop-down-bg                 | Background color of the drop-down option lists                          |    #fff |
+| --drop-down-color              | Text color fo the drop-down option lists                                |    #222 |
+| --drop-down-active-color       | Text color of the active/selected item in the drop-down list            |    #222 |
+| --drop-down-active-bg          | Background color of the active/selected item in the drop-down list      | #efefef |
+| --info-font                    | The font the vehicle information pane should use                        | inherit |
+| --info-font-base               | The base font size of the vehicle information pane.                     |    16px |
+| --info-accent-color            | The accent color the vehicle information pane should use                |    teal |
