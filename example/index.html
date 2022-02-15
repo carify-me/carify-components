@@ -1,61 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Vehicle Subscriptions</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@~2/dist/carify.min.js?dealer={DEALER_ID}"></script>
-    <style>
-      carify-vehicle-grid.blue {
-        --active-page-indicator-bg: #64b5f6;
-        --active-page-indicator-color: #fff;
-        --heading-color: #29b6f6;
-        --card-text-color: #00acc1;
-        --card-background-color: #f9fafb;
-        --card-border-radius: 10px;
-        --busy-indicator-color: #ff4081;
-        --vehicle-name-color: #8e24aa;
-        --vehicle-specs-color: #ff4081;
-        --vehicle-price-color: #29b6f6;
-        --package-detail-bg: #cfd8dc;
-        --package-detail-color: #222;
-        --vehicle-price-strike-color: #212121;
-        --badge-electric-color: #00e5ff;
-        --badge-recent-color: #d1c4e9;
-        --badge-special-color: #f48fb1;
-        --badge-hybrid-color: #4db6ac;
-        --badge-popular-color: #fa6aff;
-        --badge-text-color: #fff;
-        --active-filter-bg: #64b5f6;
-        --active-filter-color: #fff;
-        --filter-search-bg: #64b5f6;
-        --filter-search-color: #fff;
-        --filter-view-bg: #e3f2fd;
-        --filter-view-color: #000;
-        --drop-down-bg: #fff;
-        --drop-down-color: #222;
-        --drop-down-active: #e1f5fe;
-      }
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      div.wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <carify-vehicle-grid
-        class="blue"
-        sortable
-        searchable
-        paginate="8"
-        heading="Vehicles available on subscription"
-      ></carify-vehicle-grid>
-    </div>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Vehicle Subscriptions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@3.0.0-beta.0/dist/carify.min.js?group={GROUP_ID}"></script>
+  <style>
+    carify-vehicle-grid.custom-theme {
+      /* Common/shared styles */
+      --busy-indicator-color: #ff6542;
+      /* Variables for the grid itself */
+      --grid-font: 'Poppins', sans-serif;
+      --grid-font-base: 16px;
+      --grid-columns: 4;
+      --heading-color: #1d1c20;
+      --active-page-indicator-color: #fff;
+      --active-page-indicator-bg: #FA8572;
+      /* Variables for cards within the grid */
+      --card-font: 'Poppins', sans-serif;
+      --card-font-base: 16px;
+      --card-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      --card-border-radius: 20px;
+      --card-background-color: #fff;
+      --card-text-color: #222;
+      --vehicle-name-color: #003049;
+      --vehicle-specs-color: #779fa1;
+      --vehicle-price-color: #FA8572;
+      --vehicle-price-strike-color: #b30000;
+      --badge-text-color: #222;
+      --badge-electric-color: #b8fff6;
+      --badge-recent-color: #ffaeae;
+      --badge-special-color: #cb91fa;
+      --badge-popular-color: #e2ec80;
+      --badge-hybrid-color: #f888ca;
+      --package-detail-bg: #696969;
+      --package-detail-color: #fff;
+      --package-detail-border-radius: 40px;
+      --heart-fill-color: #FA8572;
+      --heart-stroke-color: #da6a48;
+      /** Variables for filter/search bar */
+      --filter-search-bg: #fa8572;
+      --filter-search-color: #fff;
+      --filter-view-bg: #fa8572;
+      --filter-view-color: #fff;
+      --active-filter-bg: #fa8572;
+      --active-filter-color: #fff;
+      /** Variables for drop downs */
+      --drop-down-bg: #fff;
+      --drop-down-color: #222;
+      --drop-down-active-color: #222;
+      --drop-down-active-bg: #efefef;
+      /** Variables for vehicle info sheet */
+      --info-font: 'Poppins', sans-serif;
+      --info-accent-color: #fa8572;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    div.wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <carify-vehicle-grid class="custom-theme" sortable searchable paginate="8"
+      heading="Vehicles available on subscription"></carify-vehicle-grid>
+  </div>
+</body>
+
 </html>
