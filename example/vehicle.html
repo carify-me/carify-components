@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Vehicle Subscriptions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@3.0.0-beta.1/dist/carify.min.js"></script>
+  <style>
+    carify-vehicle-info.custom-theme {
+      --busy-indicator-color: #fa8572;
+      --drop-down-bg: #fff;
+      --drop-down-color: #222;
+      --drop-down-active-color: #222;
+      --drop-down-active-bg: #efefef;
+      --info-font: 'Poppins', sans-serif;
+      --info-accent-color: #fa8572;
+    }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    div.wrapper {
+      max-width: 980px;
+      margin: 1em auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <carify-vehicle-info class="custom-theme"></carify-vehicle-info>
+  </div>
+</body>
+
+</html>
