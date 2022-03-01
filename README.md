@@ -148,6 +148,7 @@ Tag: `<carify-vehicle-info>`
 | Attribute | Description                                          | Default |
 | --------- | ---------------------------------------------------- | ------: |
 | uuid      | Thee UUID of the vehicle to fetch via the CARIFY API |       - |
+| handover  | Should the handover date input option be displayed   |   false |
 
 > If no UUID is provided to the `<carify-vehicle-info>` component, by default it will look for a `uuid` query parameter in the page that it is included in.
 > For example, if it is included in a page: `https://example.com/vehicle?uuid=123` it wil use `123` as the UUID of the vehicle to fetch from the CARIFY API.
