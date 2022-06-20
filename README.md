@@ -108,15 +108,17 @@ You can customize this component by specifying custom attributes:
 You can specify and advanced `config` property as a JSON object to the `<carify-vehicle-grid>`
 component with following available properties
 
-| Attribute   | Description                                                             | Default |
-| ----------- | ----------------------------------------------------------------------- | ------: |
-| advanced    | Show or hide the 'More filters' button                                  |    true |
-| duration    | The default duration package value to query                             |      12 |
-| distance    | The default distance package value to query                             |    1000 |
-| transparent | Make the backdrop of the more filters popup transparent                 |   false |
-| topAlign    | Align the more filters popup to the top of the widget instead of center |   false |
-| hide        | Hide specific filters from the more filters popup menu                  |  _none_ |
-| filters     | Pre-apply filters to the grid                                           |  _none_ |
+| Attribute      | Description                                                             | Default |
+| -----------    | ----------------------------------------------------------------------- | ------: |
+| advanced       | Show or hide the 'More filters' button                                  |    true |
+| duration       | The default duration package value to query                             |      12 |
+| distance       | The default distance package value to query                             |    1000 |
+| transparent    | Make the backdrop of the more filters popup transparent                 |   false |
+| topAlign       | Align the more filters popup to the top of the widget instead of center |   false |
+| hide           | Hide specific filters from the more filters popup menu                  |  _none_ |
+| filters        | Pre-apply filters to the grid                                           |  _none_ |
+| durationFilter | Filter duration drop-down to only show certain options (Number array)   |  _none_ |
+| distanceFilter | Filter kilometer drop-down to only show certain options (Number array)  |  _none_ |
 
 Available `hide` options
 
@@ -177,6 +179,7 @@ You are encouraged to create your own 'theme' and style these components to matc
 | --card-shadow                  | CSS drop shadow definition for a card                                   |       - |
 | --card-border-radius           | The border radius of the card                                           |    20px |
 | --card-background-color        | The background color of a card                                          |    #fff |
+| --card-photo-background        | The background color of the vehicles images                             | default |
 | --card-text-color              | The default text color of a card                                        |    #000 |
 | --vehicle-name-color           | Color of the vehicle name inside a card                                 |    #000 |
 | --vehicle-specs-color          | Color of listed vehicle specifications inside a card                    |    #000 |
