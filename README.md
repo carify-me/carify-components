@@ -91,17 +91,18 @@ Tag: `<carify-vehicle-grid>`
 
 You can customize this component by specifying custom attributes:
 
-| Attribute  | Description                                                       | Default |
-| ---------- | ----------------------------------------------------------------- | ------: |
-| paginate   | Number of cards to display per page                               |      12 |
-| heading    | Specify a heading for the grid                                    |  _none_ |
-| slider     | Use multiple images on vehicle cards instead of a single image    |   false |
-| sortable   | Add a dropdown to the grid that allows users to sort it           |   false |
-| searchable | Add a search bar to the top of the grid that allows users to search and filter |   false |
-| motion     | Add motion animation to a card when hovering over it              |   false |
-| internal   | If specified, vehicle card links will not open in a new tab       |   false |
-| page       | Custom page to navigate to when a card is clicked                 |  _none_ |
-| config     | An advanced configuration object (see advanced config)            |  _none_ |
+| Attribute    | Description                                                       | Default |
+| ----------   | ----------------------------------------------------------------- | ------: |
+| paginate     | Number of cards to display per page                               |      12 |
+| heading      | Specify a heading for the grid                                    |  _none_ |
+| slider       | Use multiple images on vehicle cards instead of a single image    |   false |
+| sortable     | Add a dropdown to the grid that allows users to sort it           |   false |
+| searchable   | Add a search bar to the top of the grid that allows users to search and filter |   false |
+| motion       | Add motion animation to a card when hovering over it              |   false |
+| internal     | If specified, vehicle card links will not open in a new tab       |   false |
+| lowest_price | Show only the lowest possible price of the vehicle                |   false |
+| page         | Custom page to navigate to when a card is clicked                 |  _none_ |
+| config       | An advanced configuration object (see advanced config)            |  _none_ |
 
 ##### Grid Advanced configuration
 
