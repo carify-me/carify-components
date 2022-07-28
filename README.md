@@ -180,7 +180,7 @@ You are encouraged to create your own 'theme' and style these components to matc
 | --card-shadow                  | CSS drop shadow definition for a card                                   |       - |
 | --card-border-radius           | The border radius of the card                                           |    20px |
 | --card-background-color        | The background color of a card                                          |    #fff |
-| --card-photo-background        | The background color of the vehicles images                             | default |
+| --card-image-background        | The background color of the vehicles images                             | default |
 | --card-text-color              | The default text color of a card                                        |    #000 |
 | --vehicle-name-color           | Color of the vehicle name inside a card                                 |    #000 |
 | --vehicle-specs-color          | Color of listed vehicle specifications inside a card                    |    #000 |
