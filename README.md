@@ -209,3 +209,4 @@ You are encouraged to create your own 'theme' and style these components to matc
 | --info-font                    | The font the vehicle information pane should use                        | inherit |
 | --info-font-base               | The base font size of the vehicle information pane.                     |    16px |
 | --info-accent-color            | The accent color the vehicle information pane should use                |    teal |
+| --gallery-background           | The background color of images in the vehicle gallery                   |   black |
