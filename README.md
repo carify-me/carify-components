@@ -100,7 +100,6 @@ You can customize this component by specifying custom attributes:
 | searchable   | Add a search bar to the top of the grid that allows users to search and filter |   false |
 | motion       | Add motion animation to a card when hovering over it              |   false |
 | internal     | If specified, vehicle card links will not open in a new tab       |   false |
-| lowest_price | Show only the lowest possible price of the vehicle                |   false |
 | page         | Custom page to navigate to when a card is clicked                 |  _none_ |
 | config       | An advanced configuration object (see advanced config)            |  _none_ |
 
@@ -112,8 +111,6 @@ component with following available properties
 | Attribute      | Description                                                             | Default |
 | -----------    | ----------------------------------------------------------------------- | ------: |
 | advanced       | Show or hide the 'More filters' button                                  |    true |
-| duration       | The default duration package value to query                             |      12 |
-| distance       | The default distance package value to query                             |    1000 |
 | transparent    | Make the backdrop of the more filters popup transparent                 |   false |
 | topAlign       | Align the more filters popup to the top of the widget instead of center |   false |
 | hide           | Hide specific filters from the more filters popup menu                  |  _none_ |
