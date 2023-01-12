@@ -18,7 +18,7 @@ A full example of the `carify-vehicle-grid` component that has been fully custom
 To get started, you should include the following script in the head of your HTML page or website:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@^3/dist/carify.min.js?dealer={DEALER_ID}"></script>
+<script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@^4/dist/carify.min.js?dealer={DEALER_ID}"></script>
 ```
 
 > Note: You should replace **{DEALER_ID}** with your _own_ unique dealer ID obtained from the CARIFY admin interface.
@@ -26,21 +26,21 @@ To get started, you should include the following script in the head of your HTML
 If on the other hand, you are part of a group you should change your script `src` attribute to to following:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@^3/dist/carify.min.js?group={GROUP_ID}"></script>
+<script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@^4/dist/carify.min.js?group={GROUP_ID}"></script>
 ```
 
 > Note: You should replace **{GROUP_ID}** with your _own_ unique group ID which you can obtain by contacting CARIFY.
 
-We follow [semantic versioning](https://semver.org) with the release of these components to ensure we don't introduce unwanted breaking changes to components you embed in your website. Please take note of the current semantic version constraint in the URL: `^3`.
+We follow [semantic versioning](https://semver.org) with the release of these components to ensure we don't introduce unwanted breaking changes to components you embed in your website. Please take note of the current semantic version constraint in the URL: `^4`.
 
-These components could potentially be receiving rolling updates by the week or by the day, so we recommend that you stick to the `^3` version constraint.
+These components could potentially be receiving rolling updates by the week or by the day, so we recommend that you stick to the `^4` version constraint.
 
-This way, your page that includes the script, will automatically receive _bug fixes_ **and** _new features_ but **no** breaking changes. We will only introduce breaking changes in a _major_ version change, i.e. `^4`.
+This way, your page that includes the script, will automatically receive _bug fixes_ **and** _new features_ but **no** breaking changes. We will only introduce breaking changes in a _major_ version change, i.e. `^5`.
 
 If you wish to however include a _specific_ version of the components, can you specify that in the URL as well, example:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@2.2.0/dist/carify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@4.0.2/dist/carify.min.js"></script>
 ```
 
 You can view available releases on the [tags page](https://github.com/carify-me/carify-components/tags).
@@ -71,7 +71,7 @@ If for example, you would like the custom HTML element to be rendered in French,
 <!DOCTYPE html>
 <html lang="it">
   <head>
-    <script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@^2/dist/carify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@^4/dist/carify.min.js"></script>
   </head>
   <body>
     <carify-vehicle-grid></carify-vehicle-grid>
