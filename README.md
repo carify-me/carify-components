@@ -93,6 +93,9 @@ You can customize this component by specifying custom attributes:
 
 | Attribute    | Description                                                       | Default |
 | ----------   | ----------------------------------------------------------------- | ------: |
+| utm_source   | UTM source query parameter value to generate in vehicle links     | partners|
+| utm_campaign | UTM campaign query parameter value to generate in vehicle links   |  carify |
+| paginate     | Number of cards to display per page                               |      12 |
 | paginate     | Number of cards to display per page                               |      12 |
 | heading      | Specify a heading for the grid                                    |  _none_ |
 | slider       | Use multiple images on vehicle cards instead of a single image    |   false |
@@ -102,6 +105,10 @@ You can customize this component by specifying custom attributes:
 | internal     | If specified, vehicle card links will not open in a new tab       |   false |
 | page         | Custom page to navigate to when a card is clicked                 |  _none_ |
 | config       | An advanced configuration object (see advanced config)            |  _none_ |
+
+> Note on UTM Campaign value:
+If a _dealer_ of _group_ query parameter is defined in the script inclusion, that value will be used
+unless an explicit _utm_campaign_ value is specified.
 
 ##### Grid Advanced configuration
 
