@@ -105,6 +105,7 @@ You can customize this component by specifying custom attributes:
 | internal     | If specified, vehicle card links will not open in a new tab       |   false |
 | page         | Custom page to navigate to when a card is clicked                 |  _none_ |
 | config       | An advanced configuration object (see advanced config)            |  _none_ |
+| try_and_buy  | Use/display Try &amp; Buy Pricing                                 |   false |
 
 > Note on UTM Campaign value:
 If a _dealer_ of _group_ query parameter is defined in the script inclusion, that value will be used
