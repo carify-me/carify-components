@@ -23,7 +23,7 @@ To get started, follow these steps to register the CARIFY web components on your
 3. Include the CARIFY web components script in your website. You will need to pass your unique _Dealer ID_ provided by CARIFY as an `id` parameter to the script. If your dealer ID is `123-ABC-XYZ` for example, you would include the script as follows:
 
    ```html
-   <script type="module" src="/carify-components.js?id=123-ABC-XYZ"></script>
+   <script type="module" src="https://cdn.jsdelivr.net/gh/carify-me/carify-components@^5/dist/carify.min.js?id=123-ABC-XYZ"></script>
    ```
 
    > Note **type="module"** for the script
